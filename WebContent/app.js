@@ -1,7 +1,7 @@
 
 (function(){
 	
-var app = angular.module("YTapp",["ngRoute"]);
+var app = angular.module("YTapp",["ngRoute","ngSanitize"]);
 
 app.config(function($routeProvider){
 	$routeProvider
