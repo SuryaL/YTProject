@@ -2,7 +2,7 @@
 
 	var app = angular.module("YTapp");
 	
-	var UserController = function($scope,$routeParams,YTservice,YTchannel){
+	var UserController = function($scope,$routeParams,$sce,YTservice,YTchannel){
 		
 		var username = $routeParams.username;
 		checkIfExists();
@@ -18,8 +18,8 @@
 					$scope.list[username].thumbnailUrl=[];
 					$scope.list[username].showThumbs =[];
 					angular.forEach(response.data.items,function(item,i){
-						var src = "https://www.youtube.com/embed/" + item.snippet.resourceId.videoId + "?autoplay=1&autohide=1&border=0&enablejsapi=1&controls=1&showinfo=0&vq=hd720";
-						console.log(src)
+						var sr= "https://www.youtube.com/embed/" + item.snippet.resourceId.videoId + "?autoplay=1&autohide=1&border=0&enablejsapi=1&controls=1&showinfo=0&vq=hd720";
+						var src= $sce.trustAsResourceUrl(sr);
 						$scope.list[username].vidlist.push(src);
 						$scope.list[username].thumbnailUrl.push(item.snippet.thumbnails.medium.url);
 						$scope.list[username].showThumbs.push(true);
