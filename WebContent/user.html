@@ -1,0 +1,8 @@
+<div class="YT-container">
+	<div class="YT-player" ng-repeat="thumb in current.thumbnailUrl">
+		<img ng-show = 'current.showThumbs[current.thumbnailUrl.indexOf(thumb)]' ng-src = {{thumb}} ng-click="replaceMe(current.thumbnailUrl.indexOf(thumb))">
+		<iframe ng-hide = 'current.showThumbs[current.thumbnailUrl.indexOf(thumb)]' width="320" height="180" ng-src= {{current.vidlist[current.thumbnailUrl.indexOf(thumb)]}}></iframe>
+	{{current.showThumbs[current.thumbnailUrl.indexOf(thumb)]}}
+	{{current.vidlist[current.thumbnailUrl.indexOf(thumb)]}}
+	</div>
+</div>
