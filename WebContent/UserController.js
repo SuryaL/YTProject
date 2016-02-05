@@ -7,7 +7,6 @@
 		var username = $routeParams.username;
 		checkIfExists();
 		
-		
 		function getUploads()
 		{
 			YTservice.getUserId(username).then(function(response){
@@ -18,7 +17,7 @@
 					$scope.list[username].thumbnailUrl=[];
 					$scope.list[username].showThumbs =[];
 					angular.forEach(response.data.items,function(item,i){
-						var sr= "https://www.youtube.com/embed/" + item.snippet.resourceId.videoId + "?autoplay=1&autohide=1&border=0&enablejsapi=1&controls=1&showinfo=0&vq=hd720";
+						var sr= "https://www.youtube.com/embed/" + item.snippet.resourceId.videoId + "?autoplay=1&autohide=1&border=0&enablejsapi=1&controls=1&showinfo=0";
 						var src= $sce.trustAsResourceUrl(sr);
 						$scope.list[username].vidlist.push(src);
 						$scope.list[username].thumbnailUrl.push(item.snippet.thumbnails.medium.url);
@@ -40,9 +39,12 @@
 				console.log($scope.list)
 			}
 		
-			if($scope.list.hasOwnProperty(username))
-				console.log(username + " already there")
-			else
+			if($scope.list.hasOwnProperty(username)){
+				console.log(username + " has already loaded");
+					var userObj = $scope.list[username];
+					YTchannel.display(userObj);
+					$scope.current = $scope.list[username];
+				}else
 				getUploads();
 		}	
 		
@@ -51,8 +53,6 @@
 
 		}
 		
-		
-		//
 		return {getUploads:getUploads}
 	};
 	

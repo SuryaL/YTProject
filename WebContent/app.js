@@ -13,5 +13,14 @@ app.config(function($routeProvider){
 				.otherwise({redirectTo:"/main"});
 	
 });
+// console.log(app);
+
+	// app.directive("ngDirective",function(){
+	// 	console.log("help");
+	// 	return ({
+	// 		restrict: 'A',
+	// 		template: "<input/>"
+	// 		})
+	// });
 
 }());

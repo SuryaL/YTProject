@@ -5,15 +5,10 @@
 	
 	function YTchannel(){
 		
-		function display(userObject){
-			console.log(userObject);
-			
+		function display(userObject){			
 			var vidlist = userObject.vidlist;
-			var thumbs = userObject.thumbnailUrl;
-			
-			
-			
-		}
+			var thumbs = userObject.thumbnailUrl;			
+			}
 		
 		return {
 			display: display
