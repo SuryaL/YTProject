@@ -7,7 +7,8 @@
 		
 		function display(userObject){			
 			var vidlist = userObject.vidlist;
-			var thumbs = userObject.thumbnailUrl;			
+			var thumbs = userObject.thumbnailUrl;
+			var tits = userObject.titles;		
 			}
 		
 		return {

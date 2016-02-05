@@ -1,7 +1,7 @@
 <div class="YT-container">
 	<div><a href = "#/main">Back to Main</a>  </div>
 	<div id=$index class="YT-player" ng-repeat="thumb in current.thumbnailUrl" >
-		<img ng-show = 'current.showThumbs[$index]' ng-src = {{thumb}} ng-click = 'replaceMe($index)'>
+		<img ng-show = 'current.showThumbs[$index]' title="{{current.titles[$index]}}" ng-src = {{thumb}} ng-click = 'replaceMe($index)'>
 		<iframe ng-hide = 'current.showThumbs[$index]' vidlink= '{{current.vidlist[$index]}}' yt-swap='vidlink ngHide ngSrc' ng-src="" width="320" height="180"  ></iframe>
 	</div>
 </div>
