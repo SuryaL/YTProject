@@ -1,42 +1,39 @@
 <!DOCTYPE html>
 <html ng-app="YTapp">
-<head>
-<meta charset="UTF-8">
-<title>URTube</title>
-<link rel="stylesheet" href="index.css"/>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.2/angular.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-route.min.js"></script>
+    <head>
+        <title>
+            URTube
+        </title>
+        <link rel="stylesheet" href="index.css">
+        <script src="//code.jquery.com/jquery-latest.min.js"></script>
+		 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.2/angular.min.js"></script>
+		 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-route.min.js"></script>
+		 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-sanitize.js"></script>
+		 
+		 <script src="app.js"></script>
+		 <script src="AppController.js"></script> 
+		 <script src="HeaderController.js"></script>
+		 <script src="UserController.js"></script>
+		 <script src="YTservice.js"></script>
+         <script src="navigateTabs.js"></script>
+         <script src="YTchannel.js"></script>
+		 <script src="YTdirective.js"></script>
+         <script src="mySidebar.js"></script>
+         <script src="closeTag.js"></script>
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-sanitize.js"></script>
-<script src="//code.jquery.com/jquery-latest.min.js"></script>
-<script src="app.js"></script>
-<script src="AppController.js"></script>
-<script src="HeaderController.js"></script>
-<script src="UserController.js"></script>
-<script src="YTservice.js"></script>
-<script src="YTchannel.js"></script>
-<script src="dataSwapDir.js"></script>
-</head>
-<body>
-<div ng-controller="AppController">
-<div ng-controller="HeaderController">
-<form ng-submit="Search(username)" class="header form"  > 
-	<h2 class="main-title"> YTapp</h2>
-	<input ng-model="username" class="search-box" type="search">
-	<input class="btn search-btn" type="submit" value="search">
-	
-</form>
-</div>
-
-<div class="sidebar" >
-	
-</div>
-
-<div class="view" ng-view>
-
-
-</div>
-</div>
-</body>
-
+    </head>
+    <body ng-cloak>
+        <div ng-controller="AppController">
+            <div ng-controller="HeaderController">
+                <form ng-submit="Search(username)" class="header form">
+                    <h2 class="main-title">
+                        YTapp
+                    </h2><input ng-model="username" class="search-box" type="search"> <input class="btn search-btn" type="submit" value="search">
+                </form>
+            </div>
+            
+            <my-sidebar> </my-sidebar>
+            <div class="view" ng-view=""></div>
+        </div>
+    </body>
 </html>
