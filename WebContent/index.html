@@ -23,17 +23,19 @@
 
     </head>
     <body ng-cloak>
-        <div ng-controller="AppController">
-            <div ng-controller="HeaderController">
-                <form ng-submit="Search(username)" class="header form">
+        <div class="container"ng-controller="AppController">
+            <div class="header" ng-controller="HeaderController">
+                <form ng-submit="Search(username)" class=" form">
                     <h2 class="main-title">
                         YTapp
-                    </h2><input ng-model="username" class="search-box" type="search"> <input class="btn search-btn" type="submit" value="search">
+                    </h2><input ng-model="username" class="search-box" type="search" autofocus> 
+                    <input class="btn search-btn" type="submit" value="search">
                 </form>
             </div>
             
-            <my-sidebar> </my-sidebar>
-            <div class="view" ng-view=""></div>
+            <div class="sidebar-container"><my-sidebar> </my-sidebar> </div>
+            <div class="view-container"><div class="view" ng-view=""></div> </div>
+            
         </div>
     </body>
 </html>

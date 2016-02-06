@@ -2,7 +2,7 @@
 	var app = angular.module('YTapp');
 	var navigateTabs = function($routeParams,$location){
 	
-			var redirect= function(userList,username){
+		var redirect= function(userList,username){
 			// var userList = list;
 			var userArr = Object.keys(userList);
 			var userLen = userArr.length;
