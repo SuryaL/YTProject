@@ -1,8 +1,10 @@
 
 <div class="sidebar">
 	<ul>
-		<li ng-repeat="(i,users) in list">
-			<a class="redit" href="#/users/{{i}}" >{{i}}</a>
+		<li ng-repeat="(i,users) in list" ng-class="{active: isActive(i)}">
+
+			<a class="redit" href="#/users/{{i}}"  >
+				<img class="thumbnail" ng-src="{{users.channelThumbnail}}" />{{i}}</a>
 			 <a class="closeTag" href="" my-close-tag="closeUser(i)">X</a>
 
 		</li>

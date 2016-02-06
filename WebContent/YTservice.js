@@ -32,7 +32,19 @@
 			
 			return callYT(basePlaylistUrl,sendData);
 		};
+
 		
+		
+		var getChannelThumbnail = function(searchName){
+			
+			var sendData = {
+					part : 'snippet',
+					forUsername : searchName,
+					key : key
+			};
+			return callYT(baseChannelUrl,sendData);
+		};
+
 		//
 		var callYT = function(url, data){
 			
@@ -43,7 +55,8 @@
 		
 		
 		return{ getUserId: getUserId,
-			getVideoIds: getVideoIds}; 
+			getVideoIds: getVideoIds,
+			getChannelThumbnail:getChannelThumbnail}; 
 	};
 	
 	

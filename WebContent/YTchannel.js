@@ -5,11 +5,13 @@
 	
 	function YTchannel(){
 		
-		function display(userObject){			
+		function display(userObject){
+			console.log(userObject);
+			
 			var vidlist = userObject.vidlist;
 			var thumbs = userObject.thumbnailUrl;
-			var tits = userObject.titles;		
-			}
+			
+		}
 		
 		return {
 			display: display
