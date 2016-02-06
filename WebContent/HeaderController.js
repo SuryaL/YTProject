@@ -6,7 +6,6 @@ var app = angular.module("YTapp");
 		$scope.Search = function(username)
 		{	
 			$location.path("/users/"+username);
-
 		}
 		
 		
