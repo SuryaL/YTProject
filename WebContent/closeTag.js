@@ -9,7 +9,7 @@
 			},
 			link: function(scope,element,attrs){
 				element.on("click",function(){
-					console.log("closing");
+					// console.log("closing");
 					scope.fn();
 				});
 			}

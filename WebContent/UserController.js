@@ -2,9 +2,10 @@
 
 	var app = angular.module("YTapp");
 	
-	var UserController = function($scope,$routeParams,$sce,YTservice,YTchannel){
+	var UserController = function($scope,$routeParams,$sce,YTservice,YTchannel,navigateTabs){
 		
 		var username = $routeParams.username;
+
 		checkIfExists();
 		var maxVids = 5;
 		
@@ -36,6 +37,7 @@
 		}
 		
 		function checkIfExists(){
+			
 			if(!($scope.list))
 			{
 				$scope.list = {};
@@ -50,9 +52,7 @@
 		}	
 		
 		$scope.replaceMe = function(index){
-
 				$scope.current.showThumbs[index] = false;
-
 		}
 		
 		return {getUploads:getUploads}

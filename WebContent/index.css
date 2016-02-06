@@ -50,7 +50,7 @@ html,body{
 	background-color:rgba(150,0,0,0.9);
 	text-align: center;
 	z-index:10;
-	min-width: 450px;
+	min-width: 520px;
 	transition:0.5s all;
 }
 
@@ -85,6 +85,9 @@ html,body{
 	top:75px;
 	height:100%;
 	background:-webkit-linear-gradient(top,rgba(20,20,20,0.7)60%,rgba(50,50,50,0.2));
+	background:-moz-linear-gradient(top,rgba(20,20,20,0.7)60%,rgba(50,50,50,0.2));
+	background:-o-linear-gradient(top,rgba(20,20,20,0.7)60%,rgba(50,50,50,0.2));
+	background:linear-gradient(top,rgba(20,20,20,0.7)60%,rgba(50,50,50,0.2));
 	padding: 10px 0px;
 	width:170px;
 	text-align: center;
@@ -152,17 +155,15 @@ a.closeTag{
  	visibility: visible;
  }
 
- li:hover 
- {
- 	background-color:rgba(150,0,0,0.9);
- 	/*border: 1px solid ;*/
- 	letter-spacing: 1px;
-
- }
 
  a.closeTag:hover{
  	text-shadow: -0.2px -1px 3px black;
  	color: white;
+ }
+ li:hover{
+ 	background-color:rgba(150,0,0,0.9);
+ 	/*border: 1px solid ;*/
+ 	letter-spacing: 1px;
  }
 
  .search-box:focus{

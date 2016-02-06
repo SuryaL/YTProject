@@ -5,12 +5,9 @@
 	return{
 		restrict: 'E',
 		templateUrl: 'sideBar.html'
-
 		};
 
 	}
 
 	app.directive("mySidebar",mySidebar);
-
-
 })();
