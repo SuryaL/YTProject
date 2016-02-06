@@ -5,6 +5,7 @@
 	return{
 		restrict: 'E',
 		templateUrl: 'sideBar.html'
+
 		};
 
 	}
