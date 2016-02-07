@@ -1,30 +1,6 @@
 (function(){
 var app = angular.module("YTapp");
 
-// <<<<<<< HEAD
-// 	var HeaderController = function($rootScope,$scope,$interval,$timeout,YTservice,$location,$cacheFactory){
-
-// 		function init(){
-// 			if(!!JSON.parse(localStorage.getItem('favsCache'))){
-// 				var favs =JSON.parse(localStorage.getItem('favsCache'));
-// 			}else{
-// 				var favs = $rootScope.favs.list;
-// 			}
-// 				var i =0;
-// 				$interval(function(){
-// 					$scope.Search(favs[i]);				
-// 					i++;
-// 				},10,favs.length);
-				
-// 		}
-
-// 		$scope.submitForm = function(username){
-// 			$scope.Search(username);
-// 		}
-
-// 		$scope.Search = function(username){
-// 			if(!!username){
-// =======
 	var HeaderController = function($rootScope,$scope,$interval,YTservice,$location,$timeout){
 		
 		
@@ -67,20 +43,9 @@ var app = angular.module("YTapp");
 		
 		$scope.Search = function(username)
 		{	
-// >>>>>>> 09e47645e61b29416b22a28eb980f5b0aba6bfb2
 			$location.path("/users/"+username);
-			}else{
-				$location.path("/main");
-			}
 		}
 		
-// <<<<<<< HEAD
-// 		init();
-// 		$timeout(function(){
-// 			$location.path('/main');
-// 			$scope.useful.currentUsername=' ';
-// 		},9000)
-// =======
 		$rootScope.bmarkToggle = function(username){
 			var index = searchBookmarkInStorage(username);
 			console.log("index",index, typeof $rootScope.favs)
@@ -105,7 +70,6 @@ var app = angular.module("YTapp");
 			return $rootScope.favs.indexOf(username);
 		}
 
-// >>>>>>> 09e47645e61b29416b22a28eb980f5b0aba6bfb2
 		
 		init();
 
@@ -113,10 +77,6 @@ var app = angular.module("YTapp");
 
 	};
 	
-// <<<<<<< HEAD
-app.controller("HeaderController",HeaderController);
-// =======
-// app.controller("HeaderController",["$rootScope","$scope","$interval","YTservice","$location","$timeout",HeaderController]);
-// >>>>>>> 09e47645e61b29416b22a28eb980f5b0aba6bfb2
+app.controller("HeaderController",["$rootScope","$scope","$interval","YTservice","$location","$timeout",HeaderController]);
 	
 }());
