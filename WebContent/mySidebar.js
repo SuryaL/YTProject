@@ -4,6 +4,7 @@
 	var mySidebar = function(){
 	return{
 		restrict: 'E',
+		replace:true,
 		templateUrl: 'sideBar.html'
 		};
 
