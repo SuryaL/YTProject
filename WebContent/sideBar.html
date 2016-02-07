@@ -7,6 +7,8 @@
 				<img class="thumbnail" ng-src="{{users.channelThumbnail}}" />{{i}}</a>
 			 <a class="closeTag" href="" my-close-tag="closeUser(i)">X</a>
 
+			 <a class="bookmarkTag" href="" ng-click="bmarkToggle(i)"><i class="book-icon2 fa fa-thumb-tack" > </i></a>
+			 <i class="book-icon fa fa-thumb-tack" ng-show="isBookmarked(i)"> </i>
 		</li>
 	</ul>
 </div>

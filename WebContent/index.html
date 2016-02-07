@@ -5,7 +5,8 @@
             YTapp
         </title>
         <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
-        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="index2.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <script src="https://code.jquery.com/jquery-latest.min.js"></script>
 		 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.2/angular.min.js"></script>
 		 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-route.min.js"></script>
@@ -30,7 +31,7 @@
                     <h2 class="main-title">
                         Steins Gate
                     </h2><input ng-model="username" class="search-box" type="search" autofocus> 
-                    <input class="btn search-btn" type="submit" value="search">
+                    <a class="search-icon" href="" ng-click="submitForm(username)"> <i class="icon-f fa fa-search fa-lg"></i></a>
                 </form>
             </div>
             

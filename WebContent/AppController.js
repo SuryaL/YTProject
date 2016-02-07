@@ -5,6 +5,11 @@
 	var AppController = function($scope,$controller,navigateTabs){
 		$scope.useful = {};
 		$scope.list={};
+
+
+
+
+		
 		$scope.closeUser = function(username){
 
 			navigateTabs.redirect($scope.list,username);
@@ -17,9 +22,6 @@
 		$scope.isActive= function(datalist)
 		{
 			return datalist === $scope.useful.currentUsername
-			// console.log(datalist);
-			// return false;
-			//return UC.currentlyActive == datalist;
 		}
 
 
