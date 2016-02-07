@@ -21,8 +21,6 @@ body{
 	font-family: 'Abel', sans-serif;
 }
 
-
-
 /*  MAIN STYLING */
 
 html,body{
@@ -30,7 +28,7 @@ html,body{
 	height:100%;
 	margin:0px;
 	padding:0px;
-	background-color: #222;
+	background-color: black;
 }
 
 .container{
@@ -45,7 +43,7 @@ html,body{
 	display:block;
 	width:100%;
 	padding: 20px;
-	background-color:rgba(150,0,0,0.9);
+	background:-webkit-linear-gradient(top,rgba(150,0,0,1)20%,rgba(0,0,0,1));
 	border-radius: 5px;
 	text-align: center;
 	z-index:10;
@@ -60,25 +58,29 @@ html,body{
 
 }
 
-.header .search-box
-{
-	width:50%;
+.header .search-box{
+	width:60%;
 	text-align: left;
 	outline: none;
 	transition: 0.5s all;
-
 }
 
-.header .search-btn{
-	width:100px;
-	margin-left: 10px;
-	text-align: center;
-	outline: none;
+
+i{
+	border: 1px solid #222;
+	color: #bbb;
+	position: absolute;
+	left: 80%;
+	top: 26%;
+	height:38px;
+	padding:10px;
+	z-index:20;
+	border-radius: 5px;
+	background:-webkit-linear-gradient(top,rgba(150,0,0,1),rgba(50,0,0,1));
 	transition: 0.5s all;
 }
 
-.sidebar-container
-{
+.sidebar-container{
 	display: block;
 	position: fixed;
 	top:75px;
@@ -91,12 +93,11 @@ html,body{
 	width:150px;
 	text-align: center;
 	z-index:5;
-	transition: 1s all;
+	transition: 0.5s all;
 
 }
 
-.sidebar
-{
+.sidebar{
 	width:100%;	
 	display: inline-block;
 	padding-bottom: 75px;
@@ -185,6 +186,9 @@ a.bookmarkTag{
  	transition: 0.5s background-color, 0.5s color;
  	border-radius: 0px;
  	z-index:10;
+}
+i:hover{
+	color: #fff;
 }
 
  li:hover .closeTag,li:hover .bookmarkTag{

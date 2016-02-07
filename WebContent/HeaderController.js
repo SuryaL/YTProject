@@ -15,10 +15,18 @@ var app = angular.module("YTapp");
 					i++;
 				},10,favs.length);
 				
-		}		
+		}
+
+		$scope.submitForm = function(username){
+			$scope.Search(username);
+		}
 
 		$scope.Search = function(username){
+			if(!!username){
 			$location.path("/users/"+username);
+			}else{
+				$location.path("/main");
+			}
 		}
 		
 		init();
