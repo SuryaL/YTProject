@@ -6,7 +6,7 @@
 	function YTchannel(){
 		
 		function display(userObject){
-		
+
 			
 			var vidlist = userObject.vidlist;
 			var thumbs = userObject.thumbnailUrl;

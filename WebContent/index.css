@@ -21,8 +21,6 @@ body{
 	font-family: 'Abel', sans-serif;
 }
 
-
-
 /*  MAIN STYLING */
 
 html,body{
@@ -30,43 +28,67 @@ html,body{
 	height:100%;
 	margin:0px;
 	padding:0px;
+/*<<<<<<< HEAD
+	background-color: black;
+=======*/
 	background-color: #222;
+/*>>>>>>> 09e47645e61b29416b22a28eb980f5b0aba6bfb2*/
 }
 
-.container
-{
+.container{
 	position:relative;
 	width:100%;
 	height:100%;
 	
 }
 
-.header
-{
+.header{
 	position: fixed;
 	display:block;
 	width:100%;
 	padding: 20px;
+/*<<<<<<< HEAD*/
+	background:-webkit-linear-gradient(top,rgba(150,0,0,1)20%,rgba(0,0,0,1));
+	border-radius: 5px;
+	text-align: center;
+	z-index:10;
+	min-width: 520px;
+/*=======
 	background-color:rgba(150,0,0,0.9);
 	text-align: center;
 	z-index:10;
 	min-width: 450px;
+>>>>>>> 09e47645e61b29416b22a28eb980f5b0aba6bfb2*/
 	transition:0.5s all;
 }
 
-.header h2
-{
+.header h2{
 	float: left;
 	display:inline-block;
 	font-family: 'Abel', sans-serif;
 }
 
-.header .search-box
-{
-	width:50%;
+.header .search-box{
+	width:60%;
 	text-align: left;
 	outline: none;
 	transition: 0.5s all;
+<<<<<<< HEAD
+}
+
+
+i{
+	border: 1px solid #222;
+	color: #bbb;
+	position: absolute;
+	left: 80%;
+	top: 26%;
+	height:38px;
+	padding:10px;
+	z-index:20;
+	border-radius: 5px;
+	background:-webkit-linear-gradient(top,rgba(150,0,0,1),rgba(50,0,0,1));
+=======
 
 }
 
@@ -75,26 +97,40 @@ html,body{
 	margin-left: 10px;
 	text-align: center;
 	outline: none;
+>>>>>>> 09e47645e61b29416b22a28eb980f5b0aba6bfb2
 	transition: 0.5s all;
 }
 
-.sidebar-container
-{
+.sidebar-container{
 	display: block;
 	position: fixed;
 	top:75px;
 	height:100%;
 	background:-webkit-linear-gradient(top,rgba(20,20,20,0.7)60%,rgba(50,50,50,0.2));
+<<<<<<< HEAD
+	background:-moz-linear-gradient(top,rgba(20,20,20,0.7)60%,rgba(50,50,50,0.2));
+	background:-o-linear-gradient(top,rgba(20,20,20,0.7)60%,rgba(50,50,50,0.2));
+	background:linear-gradient(top,rgba(20,20,20,0.7)60%,rgba(50,50,50,0.2));
+=======
+>>>>>>> 09e47645e61b29416b22a28eb980f5b0aba6bfb2
 	padding: 0px 0px 0px 0px;
 	width:150px;
 	text-align: center;
 	z-index:5;
+<<<<<<< HEAD
+	transition: 0.5s all;
+
+}
+
+.sidebar{
+=======
 	transition: 1s all;
 	
 }
 
 .sidebar
 {
+>>>>>>> 09e47645e61b29416b22a28eb980f5b0aba6bfb2
 	width:100%;	
 	display: inline-block;
 	padding-bottom: 75px;
@@ -104,9 +140,22 @@ html,body{
 	border-radius: 10px;
 	text-align: center;
 	overflow-y: scroll;
+<<<<<<< HEAD
+}
+
+.sidebar img{
+	width: 95px;
+	height: 95px;
+	display: inline-block;
+	border-radius: 10px;
+	/*float: left;*/
+}
+
+=======
 }
 
 
+>>>>>>> 09e47645e61b29416b22a28eb980f5b0aba6bfb2
 ul{
 	list-style-type: none;
 	padding:2px;
@@ -153,12 +202,38 @@ a.closeTag{
 	height:100%;
 	margin:0px;
 	padding:2px;
+<<<<<<< HEAD
 	text-decoration: none;
  	transition: 0.5s background-color, 0.5s color;
  	border-radius: 0px;
  	z-index:10;
 }
- li:hover .closeTag{
+a.bookmarkTag{
+	font-family: 'Abel', sans-serif;
+	display: inline-block;
+	color: black;
+	visibility: hidden;
+	font-weight: bolder;
+	font-size:15px;
+	position: absolute;
+	width:auto;
+	top:60%;
+	right:2px;
+	height:100%;
+	margin:0px;
+	padding:2px;
+=======
+>>>>>>> 09e47645e61b29416b22a28eb980f5b0aba6bfb2
+	text-decoration: none;
+ 	transition: 0.5s background-color, 0.5s color;
+ 	border-radius: 0px;
+ 	z-index:10;
+}
+i:hover{
+	color: #fff;
+}
+
+ li:hover .closeTag,li:hover .bookmarkTag{
  	visibility: visible;
  }
 
@@ -170,21 +245,33 @@ a.closeTag{
 
  }
 
+<<<<<<< HEAD
+.active{
+=======
 .active
 {
+>>>>>>> 09e47645e61b29416b22a28eb980f5b0aba6bfb2
 	background-color:rgba(0,150,200,0.9);
  	/*border: 1px solid ;*/
  	/*letter-spacing: 1px;*/
 }
 
+<<<<<<< HEAD
+li:hover.active{
+=======
 li:hover.active
 {
+>>>>>>> 09e47645e61b29416b22a28eb980f5b0aba6bfb2
 	background-color:rgba(0,200,255,0.9);
  	/*border: 1px solid ;*/
  	letter-spacing: 1px;
 }
 
+<<<<<<< HEAD
+ a.closeTag:hover, a.bookmarkTag:hover{
+=======
  a.closeTag:hover{
+>>>>>>> 09e47645e61b29416b22a28eb980f5b0aba6bfb2
  	text-shadow: -0.2px -1px 3px black;
  	color: white;
  }
@@ -246,6 +333,14 @@ li:hover.active
 	margin: 2px;
 	border-radius: 10px;
 }
+<<<<<<< HEAD
+.main-menu{
+	display: inline-block;
+	text-decoration: none;
+	color: #ddd;
+}
+=======
+>>>>>>> 09e47645e61b29416b22a28eb980f5b0aba6bfb2
 .back-menu:hover{
 	letter-spacing: 1px;
 	background-color: #555;
@@ -253,3 +348,20 @@ li:hover.active
 	width:85%;
 }
 
+<<<<<<< HEAD
+/*Scroll Bars*/
+
+.sidebar::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+.sidebar::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 0px rgba(150,0,0,0.5);
+}
+ 
+.sidebar::-webkit-scrollbar-thumb {
+  background: -webkit-linear-gradient(top,rgba(150,0,0,0.7)78%,rgba(150,0,0,0)78%);
+  outline: 1px solid rgba(150,0,0,0);
+}
+=======
+>>>>>>> 09e47645e61b29416b22a28eb980f5b0aba6bfb2

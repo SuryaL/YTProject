@@ -1,7 +1,7 @@
 (function(){
 	var app = angular.module('YTapp');
 	var navigateTabs = function($routeParams,$location){
-	
+
 		var redirect= function(userList,username){
 			// var userList = list;
 			var userArr = Object.keys(userList);
@@ -12,6 +12,7 @@
 			var nextUser = userArr[userIndex+1];
 
 			var activeUser = $routeParams.username;
+
 			if(userLen>1){
 				if(activeUser === username){
 					if(!!nextUser){
@@ -23,8 +24,8 @@
 			} else{
 				$location.path("/main");
 			}
-			console.log(userIndex);
 		}
+
 	return{redirect:redirect};
 
 	}

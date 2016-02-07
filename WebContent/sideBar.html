@@ -2,13 +2,21 @@
 <div class="sidebar">
 	<ul>
 		<li ng-repeat="(i,users) in list" ng-class="{active: isActive(i)}">
+<!-- <<<<<<< HEAD
 
+			<a class="redit" href="#/users/{{i}}"  >
+				<img class="thumbnail" ng-src="{{users.channelThumbnail}}" />{{i}}</a>
+			 <a class="closeTag" href=""  my-close-tag="closeUser(i)">X</a>
+			 <a class="bookmarkTag" href=""  my-bookmark-tag="bookmark(i)">B</a>
+=======
+ -->
 			<a class="redit" href="#/users/{{i}}"  >
 				<img class="thumbnail" ng-src="{{users.channelThumbnail}}" />{{i}}</a>
 			 <a class="closeTag" href="" my-close-tag="closeUser(i)">X</a>
 
 			 <a class="bookmarkTag" href="" ng-click="bmarkToggle(i)"><i class="book-icon2 fa fa-thumb-tack" > </i></a>
 			 <i class="book-icon fa fa-thumb-tack" ng-show="isBookmarked(i)"> </i>
+<!-- >>>>>>> 09e47645e61b29416b22a28eb980f5b0aba6bfb2 -->
 		</li>
 	</ul>
 </div>
