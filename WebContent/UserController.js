@@ -7,7 +7,7 @@
 		var username = $routeParams.username;
 
 		checkIfExists();
-		var maxVids = 5;
+		var maxVids = 15;
 		
 		function getUploads()
 		{
@@ -32,6 +32,8 @@
 						$scope.list[username].showThumbs.push(true);
 						$scope.list[username].titles.push(item.snippet.title);
 					});
+
+
 					var userObj = $scope.list[username];
 					YTchannel.display(userObj);
 					$scope.current = $scope.list[username];
