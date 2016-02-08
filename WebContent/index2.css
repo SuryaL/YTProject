@@ -245,18 +245,13 @@ li:hover.active{
 
  }
 .disp-img{
-	border-radius: 10px;
-	transition: 0.5s all;
-	/*-webkit-filter: brightness(50%);*/
-	-webkit-filter: blur(0px);
-	opacity: 0.5;
-	/*border:1px solid white;*/
+	border-radius: 2px;
+	transition: 0.2s -webkit-filter;
+	opacity: 1;
 }
 .disp-img:hover{
-	border: 0px solid white;
-	transform: scale(1.1);
-	border-radius: 2px;
-	opacity: 1;
+	opacity: 0.5;
+	-webkit-filter:blur(2px);
 	z-index: 1;
 }
 
@@ -269,24 +264,26 @@ li:hover.active{
 	pointer-events:none;
 	transition: 0.5s all;
 	opacity: 1;
-	color:white;
-	/*border: 1px solid white;*/
 }
 div.img-title{
 	top:0px;left:10px;
-	width: 280px; height:1.1em;
+	width: 300px; height:1.2em;
 	font-size: 15px;
 	white-space:nowrap;
 	overflow: hidden;
 	text-overflow:ellipsis;
-
+	transition: 0.5s all;
+	text-align: left;
+	color: #222;
 }
 .play-img:hover{
 	z-index: 1;
 }
 .disp-img:hover~.img-title{
-	transform:scale(1.1);
-	/*font-size: 17px;*/
+	width: 300px; height:100px;
+	white-space: initial;
+	text-align: left;
+	color: #fff;
 }
 
 
@@ -315,10 +312,6 @@ div.img-title{
 	display: inline-block;
 	margin:0px;
 	position: relative;
-	transition: 0.5s all;
-}
-.YT-player:hover{
-	tranform:scale(1.1);
 }
 .back-menu{
 	display: inline-block;
