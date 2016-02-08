@@ -45,7 +45,7 @@
 			return callYT(baseChannelUrl,sendData);
 		};
 
-		//
+		
 		var callYT = function(url, data){
 			
 			return $http.get(url,{params:data});

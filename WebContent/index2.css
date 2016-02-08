@@ -305,8 +305,9 @@ li:hover.active{
 	opacity: 1;
 }
 div.img-title{
-	top:0px;left:10px;
-	width: 300px; height:0.1em;
+	top:0px;left:0px;
+	width: 100%;
+	height:auto;
 	font-size: 15px;
 	white-space:nowrap;
 	overflow: hidden;
@@ -316,19 +317,22 @@ div.img-title{
 	-o-transition: color 0.5s, height 1s;
 	transition: color 0.5s, height 1s;
 	text-align: left;
-	color: #222;
-	visibility: hidden;
+	color: #CCC;
+	padding:0px 6px;
+	background-color: rgba(0,0,0,0.7);
 }
 .play-img:hover{
 	z-index: 1;
 	
 }
 .disp-img:hover~.img-title{
-	width: 300px; height:100px;
+	width: 100%; 
+	height:auto;
 	white-space: initial;
 	text-align: left;
 	visibility: visible;
 	color: #fff;
+	background-color: transparent;
 }
 .play-btn{
 	border-radius: 50%;
@@ -340,7 +344,9 @@ div.img-title{
 	
 }
 
-
+.disp-img:hover+.play-btn{
+	color:red;
+}
 /* VIEW */
 
 .view-container{
