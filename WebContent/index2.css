@@ -307,27 +307,30 @@ li:hover.active{
 div.img-title{
 	top:0px;left:0px;
 	width: 100%;
-	height:auto;
+	height: 1.1em;
 	font-size: 15px;
-	white-space:nowrap;
+	/*white-space:nowrap;*/
 	overflow: hidden;
 	text-overflow:ellipsis;
-	-webkit-transition: color 0.5s, height 1s;
-	-moz-transition: color 0.5s, height 1s;
-	-o-transition: color 0.5s, height 1s;
-	transition: color 0.5s, height 1s;
+	-webkit-transition: color 0.5s, height 0.1s ease-out;
+	-moz-transition: color 0.5s, height 0.1s;
+	-o-transition: color 0.5s, height 0.1s;
+	transition: color 0.5s, height 0.1s ease-out;
 	text-align: left;
 	color: #CCC;
 	padding:0px 6px;
 	background-color: rgba(0,0,0,0.7);
 }
 .play-img:hover{
-	z-index: 1;
-	
+	z-index: 1;	
 }
 .disp-img:hover~.img-title{
+	-webkit-transition: color 0.5s, height 2s;
+	-moz-transition: color 0.5s, height 1s;
+	-o-transition: color 0.5s, height 1s;
+	transition: color 0.5s, height 2s;
 	width: 100%; 
-	height:auto;
+	height: 100%;
 	white-space: initial;
 	text-align: left;
 	visibility: visible;
@@ -335,7 +338,7 @@ div.img-title{
 	background-color: transparent;
 }
 .play-btn{
-	border-radius: 50%;
+	border-radius: 40%;
 
 }
 .disp-img:hover~.play-btn{
