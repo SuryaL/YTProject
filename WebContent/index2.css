@@ -40,15 +40,24 @@ html,body{
 	width:100%;
 	padding: 20px;
 	background:-webkit-linear-gradient(top,rgba(150,0,0,1)20%,rgba(0,0,0,1));
+	background:-moz-linear-gradient(top,rgba(150,0,0,1)20%,rgba(0,0,0,1));
+	background:-o-linear-gradient(top,rgba(150,0,0,1)20%,rgba(0,0,0,1));
+	background:linear-gradient(top,rgba(150,0,0,1)20%,rgba(0,0,0,1));
 	border-radius: 5px;
 	text-align: center;
 	z-index:10;
 	min-width: 520px;
-	transition:0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	transition: 0.5s all;
 }
 
 .main-title a{
 	color: #ccc;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
 	transition: 0.5s all;
 	cursor: pointer;
 	text-decoration: none;
@@ -68,6 +77,9 @@ html,body{
 	width:60%;
 	text-align: left;
 	outline: none;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
 	transition: 0.5s all;
 }
 
@@ -83,6 +95,12 @@ html,body{
 	z-index:20;
 	border-radius: 5px;
 	background:-webkit-linear-gradient(top,rgba(150,0,0,1),rgba(50,0,0,1));
+	background:-moz-linear-gradient(top,rgba(150,0,0,1),rgba(50,0,0,1));
+	background:-o-linear-gradient(top,rgba(150,0,0,1),rgba(50,0,0,1));
+	background:linear-gradient(top,rgba(150,0,0,1),rgba(50,0,0,1));
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
 	transition: 0.5s all;
 }
 
@@ -99,6 +117,9 @@ html,body{
 	width:150px;
 	text-align: center;
 	z-index:5;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
 	transition: 0.5s all;
 
 }
@@ -137,7 +158,10 @@ li{
 	padding:0px;
 	text-align: left;
 	border-radius: 5px;
- 	transition: 0.5s all;
+ 	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	transition: 0.5s all;
 
 }
 a.redit{
@@ -170,6 +194,9 @@ a.closeTag{
 	margin:0px;
 	padding:2px;
 	text-decoration: none;
+	-webkit-transition: 0.5s background-color, 0.5s color;
+	-moz-transition: 0.5s background-color, 0.5s color;
+	-o-transition: 0.5s background-color, 0.5s color;
  	transition: 0.5s background-color, 0.5s color;
  	border-radius: 0px;
  	z-index:10;
@@ -182,6 +209,9 @@ a.bookmarkTag{
 	width:auto;
 	bottom:5px;
 	right:5px;
+ 	-webkit-transition: 0.5s background-color, 0.5s color;
+	-moz-transition: 0.5s background-color, 0.5s color;
+	-o-transition: 0.5s background-color, 0.5s color;
  	transition: 0.5s background-color, 0.5s color;
  	border-radius: 0px;
  	z-index:10;
@@ -197,15 +227,12 @@ i:hover{
  li:hover 
  {
  	background-color:rgba(180,0,0,0.9);
- 	/*border: 1px solid ;*/
  	letter-spacing: 1px;
 
  }
 
 .active{
 	background-color:rgba(0,150,200,0.9);
- 	/*border: 1px solid ;*/
- 	/*letter-spacing: 1px;*/
 }
 
 li:hover.active{
@@ -246,12 +273,18 @@ li:hover.active{
  }
 .disp-img{
 	border-radius: 2px;
-	transition: 0.2s -webkit-filter;
+	-webkit-transition: 0.2s -webkit-filter;
+	-moz-transition: 0.2s -moz-filter;
+	-o-transition: 0.2s -o-filter;
+	transition: 0.2s filter;
 	opacity: 1;
 }
 .disp-img:hover{
 	opacity: 0.5;
 	-webkit-filter:blur(2px);
+	-moz-filter:blur(2px);
+	-o-filter:blur(2px);
+	filter:blur(2px);
 	z-index: 1;
 }
 
@@ -262,6 +295,9 @@ li:hover.active{
 	z-index: 20;
 	left: 100px; top:50px;
 	pointer-events:none;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
 	transition: 0.5s all;
 	opacity: 1;
 }
@@ -272,6 +308,9 @@ div.img-title{
 	white-space:nowrap;
 	overflow: hidden;
 	text-overflow:ellipsis;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
 	transition: 0.5s all;
 	text-align: left;
 	color: #222;
@@ -318,6 +357,9 @@ div.img-title{
 	text-decoration: none;
 	background-color: #333;
 	color: #ddd;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
 	transition: 0.5s all;
 	width:80%;
 	margin: 2px;
@@ -350,6 +392,32 @@ div.img-title{
   outline: 1px solid rgba(150,0,0,0);
 }
 
+.sidebar::-moz-scrollbar {
+    width: 5px;
+}
+ 
+.sidebar::-moz-scrollbar-track {
+    -moz-box-shadow: inset 0 0 0px rgba(150,0,0,0.5);
+}
+ 
+.sidebar::-moz-scrollbar-thumb {
+  background: -moz-linear-gradient(top,rgba(150,0,0,0.7)78%,rgba(150,0,0,0)78%);
+  outline: 1px solid rgba(150,0,0,0);
+}
+.sidebar::-o-scrollbar {
+    width: 5px;
+}
+ 
+.sidebar::-o-scrollbar-track {
+    -o-box-shadow: inset 0 0 0px rgba(150,0,0,0.5);
+}
+ 
+.sidebar::-o-scrollbar-thumb {
+  background: -o-linear-gradient(top,rgba(150,0,0,0.7)78%,rgba(150,0,0,0)78%);
+  outline: 1px solid rgba(150,0,0,0);
+}
+
+/*********/
 
 .search-box:hover+.search-icon .icon-f{
 	border:1px solid white;
