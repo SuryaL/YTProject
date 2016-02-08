@@ -4,7 +4,7 @@
 		
 		<img class ="disp-img" ng-show = 'current.showThumbs[$index]' title="" ng-src = {{thumb}} ng-click = 'replaceMe($index)'>
 		<div class ="img-title play-img" ng-show = 'current.showThumbs[$index]' ng-click = 'replaceMe($index)'>{{current.titles[$index]}}</div>
-		<img class ="play-img" ng-show = 'current.showThumbs[$index]' title="play" ng-src = "http://www.clipartbest.com/cliparts/yjc/xgM/yjcxgMaTE.png" ng-click = 'replaceMe($index)'>
+		<img class ="play-img play-btn" ng-show = 'current.showThumbs[$index]' title="play" ng-src = "http://www.clipartbest.com/cliparts/yjc/xgM/yjcxgMaTE.png" ng-click = 'replaceMe($index)'>
 		<iframe ng-hide = 'current.showThumbs[$index]' vidlink= '{{current.vidlist[$index]}}' yt-swap='vidlink ngHide ngSrc' ng-src="" width="320" height="180" frameborder="0" allowfullscreen></iframe>
 	</div>
 </div>

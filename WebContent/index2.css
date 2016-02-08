@@ -270,19 +270,24 @@ li:hover.active{
 
  }
 .disp-img{
-	border-radius: 2px;
-	-webkit-transition: 0.2s -webkit-filter;
-	-moz-transition: 0.2s -moz-filter;
-	-o-transition: 0.2s -o-filter;
-	transition: 0.2s filter;
+	/*border-radius: 2px;*/
+	-webkit-transition: 0.3s transform;
+	-moz-transition: 0.3s transform;
+	-o-transition: 0.3s transform;
+	transition:  0.5s transform;
+	-webkit-transform-origin: 50% 50%;
+	text-align: center;
+
 	opacity: 1;
 }
 .disp-img:hover{
-	opacity: 0.5;
+	opacity: 0.3;
 	-webkit-filter:blur(2px);
 	-moz-filter:blur(2px);
 	-o-filter:blur(2px);
 	filter:blur(2px);
+	transform:scale(1.2);
+	text-align: center;
 	z-index: 1;
 }
 
@@ -301,26 +306,38 @@ li:hover.active{
 }
 div.img-title{
 	top:0px;left:10px;
-	width: 300px; height:1.2em;
+	width: 300px; height:0.1em;
 	font-size: 15px;
 	white-space:nowrap;
 	overflow: hidden;
 	text-overflow:ellipsis;
-	-webkit-transition: 0.5s all;
-	-moz-transition: 0.5s all;
-	-o-transition: 0.5s all;
-	transition: 0.5s all;
+	-webkit-transition: color 0.5s, height 1s;
+	-moz-transition: color 0.5s, height 1s;
+	-o-transition: color 0.5s, height 1s;
+	transition: color 0.5s, height 1s;
 	text-align: left;
 	color: #222;
+	visibility: hidden;
 }
 .play-img:hover{
 	z-index: 1;
+	
 }
 .disp-img:hover~.img-title{
 	width: 300px; height:100px;
 	white-space: initial;
 	text-align: left;
+	visibility: visible;
 	color: #fff;
+}
+.play-btn{
+	border-radius: 50%;
+
+}
+.disp-img:hover~.play-btn{
+	/*background: -webkit-linear-gradient(top,rgba(100,0,0,0.5),rgba(100,0,0,0.5)), url('http://www.clipartbest.com/cliparts/yjc/xgM/yjcxgMaTE.png');*/
+	border-radius: 50%;
+	
 }
 
 
@@ -349,6 +366,9 @@ div.img-title{
 	display: inline-block;
 	margin:0px;
 	position: relative;
+	width: 320px; height:180px;
+	overflow: hidden;
+	text-align: center;
 }
 .back-menu{
 	display: inline-block;
