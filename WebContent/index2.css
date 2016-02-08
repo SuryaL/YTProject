@@ -8,10 +8,6 @@ body{
 	font-family: 'Abel', sans-serif;
 }
 
-.main-title{
-	color: #ddd;
-}
-
 .search-box, .search-btn{
 	border: 1px solid black;
 	border-radius: 8px;
@@ -51,6 +47,14 @@ html,body{
 	transition:0.5s all;
 }
 
+.main-title{
+	color: #ccc;
+	transition: 0.5s all;
+}
+
+.main-title:hover{
+	color: #fff;
+}
 .header h2{
 	float: left;
 	display:inline-block;
@@ -238,11 +242,20 @@ li:hover.active{
 	background-color:rgba(150,0,0,0.9);
 
  }
+.disp-img{
+	border-radius: 10px;
+	transition: 0.5s all;
+}
+.disp-img:hover{
+	border: 0px solid white;
+	transform: scale(1.1);
+	border-radius: 2px;
+	z-index: 1;
+}
 
 /* VIEW */
 
-.view-container
-{
+.view-container{
 	display: inline-block;
 	position:relative;
 	left:0px;
@@ -264,7 +277,7 @@ li:hover.active{
 .YT-player
 {
 	display: inline-block;
-	margin:2px;
+	margin:1px;
 }
 .back-menu{
 	display: inline-block;
