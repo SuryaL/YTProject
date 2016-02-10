@@ -5,7 +5,7 @@
 	return{
 		restrict: 'E',
 		replace:true,
-		templateUrl: 'sideBar.html',
+		templateUrl: '../../Views/sideBar.html',
 
 		controller:function($scope,$rootScope){
 			

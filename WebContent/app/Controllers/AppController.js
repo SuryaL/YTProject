@@ -7,9 +7,6 @@
 		$scope.list={};
 
 
-
-
-		
 		$scope.closeUser = function(username){
 
 			navigateTabs.redirect($scope.list,username);

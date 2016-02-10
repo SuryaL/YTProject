@@ -6,7 +6,7 @@ var app = angular.module("YTapp",["ngRoute","ngSanitize"]);
 app.config(function($routeProvider){
 	$routeProvider
 				.when("/users/:username",{
-					templateUrl: 'user.html',
+					templateUrl: './user.html',
 					controller:'UserController'
 				})
 				
@@ -15,8 +15,8 @@ app.config(function($routeProvider){
 });
 
 
-app.config(['$httpProvider', function($httpProvider) {
-  $httpProvider.defaults.withCredentials = true;
-}])
+// app.config(['$httpProvider', function($httpProvider) {
+//   $httpProvider.defaults.withCredentials = true;
+// }])
 
 }());
