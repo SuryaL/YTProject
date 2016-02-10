@@ -1,7 +1,7 @@
 (function(){
 	var app = angular.module("YTapp");
 
-	var mySidebar = function(){
+	var sidebar = function(){
 	return{
 		restrict: 'E',
 		replace:true,
@@ -24,7 +24,7 @@
 
 	}
 
-	app.directive("mySidebar",mySidebar);
+	app.directive("sidebar",sidebar);
 
 
 })();

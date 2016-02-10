@@ -3,14 +3,13 @@
 {
 	var app = angular.module("YTapp");
 	
-	var YTservice = function($http){
+	var ytService = function($http){
 		var baseChannelUrl = "https://www.googleapis.com/youtube/v3/channels";
 		var basePlaylistUrl = "https://www.googleapis.com/youtube/v3/playlistItems";
 		var key = 'AIzaSyAdTDL8qNbTR8X-mN1bydX9NvCzCmvzK_Q';
 		
 		//
 		var getUserId = function(searchName){
-			
 			var sendData = {
 					part : 'contentDetails',
 					forUsername : searchName,
@@ -60,6 +59,6 @@
 	};
 	
 	
-	app.factory("YTservice",YTservice);
+	app.factory("ytService",ytService);
 	
 }());

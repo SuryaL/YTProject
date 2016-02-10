@@ -1,6 +1,6 @@
 (function(){
 	var app = angular.module('YTapp');
-	var navigateTabs = function($routeParams,$location){
+	var navigateTabsService = function($routeParams,$location){
 	
 		var redirect= function(userList,username){
 			// var userList = list;
@@ -29,5 +29,5 @@
 
 	}
 
-	app.factory("navigateTabs",navigateTabs);
+	app.factory("navigateTabsService",navigateTabsService);
 })();

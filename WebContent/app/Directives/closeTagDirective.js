@@ -1,11 +1,11 @@
 (function(){
 
 	var app = angular.module("YTapp");
-	var myCloseTag = function(){
+	var closeTag = function(){
 		return{
 			restrict: 'A',
 			scope: {
-				fn:"&myCloseTag"
+				fn:"&closeTagDir"
 			},
 			link: function(scope,element,attrs){
 				element.on("click",function(){
@@ -18,6 +18,6 @@
 	};
 
 
-	app.directive("myCloseTag",myCloseTag);
+	app.directive("closeTag",closeTag);
 
 })();

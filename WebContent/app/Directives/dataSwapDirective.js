@@ -1,15 +1,15 @@
 (function() {
 
 	var app = angular.module("YTapp");
-	app.directive("swapData", swapData);
-	function swapData($compile) {
+	app.directive("dataSwap", dataSwap);
+	function dataSwap($compile) {
 
 		return ({
 			restrict : "A",
 			
 			link : function(scope, ele, attrs) {
 
-				var arg = attrs["swapData"];
+				var arg = attrs["dataSwap"];
 				var params = arg.split(" ");
 
 				scope.$watch(attrs[(params[0])], function(newVal, oldVal){
