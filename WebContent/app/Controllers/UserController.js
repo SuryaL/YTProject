@@ -2,9 +2,9 @@
 
 	var app = angular.module("YTapp");
 	
-	var UserController = function($scope,$routeParams,$sce,ytGetService,ytDisplayService){
+	var UserController = function($scope,$stateParams,$sce,ytGetService,ytDisplayService){
 		
-		var username = $routeParams.username;
+		var username = $stateParams.username;
 		checkIfExists();
 		var maxVids = 15;
 		

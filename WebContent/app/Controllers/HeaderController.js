@@ -8,17 +8,17 @@ var app = angular.module("YTapp");
 
 		// Only function to be run by this controller
 		function init(){
-			$rootScope.favs = ["surysunny17","sawyer7mage"];
+			$rootScope.favs = [];
 			run();
 		}
 
 		// Loads favorites from local storage
 		function run()
 		{
-			//if(!(angular.isDefined(localStorage.bookmarks)))
+			if(!(angular.isDefined(localStorage.bookmarks)))
 				localStorage.setItem("bookmarks",JSON.stringify($rootScope.favs));
-			// else
-			// 	$rootScope.favs = JSON.parse(localStorage.getItem("bookmarks"));
+			 else
+			 	$rootScope.favs = JSON.parse(localStorage.getItem("bookmarks"));
 				
 
 			if(($rootScope.favs.length)!=0)			
