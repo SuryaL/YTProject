@@ -2,60 +2,50 @@
 
 	var app = angular.module("YTapp");
 	
-	var UserController = function($scope,$routeParams,$sce,ytGetService,ytDisplayService){
+	var UserController = function($scope,$stateParams,$sce,ytGetService,ytDisplayService,getVidInfoService){
 		
-		var username = $routeParams.username;
-		checkIfExists();
+		var username = $stateParams.username;
+		
 		var maxVids = 15;
+		checkIfExists(username);
 		
-		function getUploads()
-		{
-			ytGetService.getUserId(username).then(function(response){
-				
-				var uid = response.data.items[0].contentDetails.relatedPlaylists.uploads;
-				$scope.list[username]={userId:uid};
-				ytGetService.getChannelThumbnail(username).then(function(response){
-					$scope.list[username].channelThumbnail = response.data.items[0].snippet.thumbnails.default.url;
-					//console.log($scope.list);
-				});
-				ytGetService.getVideoIds(uid,maxVids).then(function(response){
-					$scope.list[username].vidlist=[];
-					$scope.list[username].thumbnailUrl=[];
-					$scope.list[username].titles=[];
-					$scope.list[username].showThumbs =[];
-					angular.forEach(response.data.items,function(item,i){
-						var sr= "https://www.youtube.com/embed/" + item.snippet.resourceId.videoId + "?autoplay=1&autohide=1&border=0&enablejsapi=1&controls=1&showinfo=0&vq=hd720";
-						var src= $sce.trustAsResourceUrl(sr);
-						$scope.list[username].vidlist.push(src);
-						$scope.list[username].thumbnailUrl.push(item.snippet.thumbnails.medium.url);
-						$scope.list[username].showThumbs.push(true);
-						$scope.list[username].titles.push(item.snippet.title);
-					});
+		
+		function getUploads(username2) {
+			
+			var xx = getVidInfoService.getUploads(username2,maxVids)
+						.then(function(r)
+							{
+								//console.log("itsme",r);
+								$scope.list[username2] = r[username2];
+								console.log("itsme",r,$scope.list);
+							}).then(function(){after(username2);})
 
 
-					var userObj = $scope.list[username];
+				function after(username2){
+					//$scope.list.useful ="";
+					var userObj = $scope.list[username2];
+					console.log($scope.list,$scope.list[username2],userObj,username2)
 					ytDisplayService.display(userObj);
-					$scope.current = $scope.list[username];
-					$scope.useful.currentUsername = username;
-				});
-				
-			});
-					
+					$scope.list.current = $scope.list[username2];
+					$scope.list["useful"]={currentUsername : username2};
+				}
+			
 		}
+
 		
-		function checkIfExists(){
+		function checkIfExists(username2){
 			if(!($scope.list))
 			{
 				$scope.list = {};
 				console.log($scope.list)
 			}
 		
-			if($scope.list.hasOwnProperty(username)){
-				console.log(username + " has already loaded");
-					$scope.current = $scope.list[username];
-					$scope.useful.currentUsername = username;
+			if($scope.list.hasOwnProperty(username2)){
+				//console.log(username2 + " has already loaded");
+					$scope.current = $scope.list[username2];
+					$scope.useful.currentUsername = username2;
 				}else
-				getUploads();
+				{getUploads(username2);}
 		}	
 		
 		$scope.replaceMe = function(index){
@@ -64,7 +54,7 @@
 
 		}
 		
-		// return {getUploads:getUploads,currentlyActive : $scope.current }
+		
 	};
 	
 	
