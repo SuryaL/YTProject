@@ -2,25 +2,13 @@
 
 	var app = angular.module("YTapp");
 	
-	var AppController = function($scope,$controller,navigateTabsService){
+	var AppController = function($scope){
+		
+		// useful.currentUsername holds the current username that is available to all scopes
 		$scope.useful = {};
+		
+		// holds the list of all the users
 		$scope.list={};
-
-
-		$scope.closeUser = function(username){
-
-			navigateTabsService.redirect($scope.list,username);
-			delete $scope.list[username];
-			$scope.$apply();			
-		}
-	
-		// var UC = $controller("UserController");
-
-		$scope.isActive= function(datalist)
-		{
-			return datalist === $scope.useful.currentUsername
-		}
-
 
 	};
 	

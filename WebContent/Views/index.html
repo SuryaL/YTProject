@@ -2,53 +2,60 @@
 <html ng-app="YTapp">
     <head>
         <title>
-            YTapp
+        YTapp
         </title>
 
-       <!-- CSS -->
+        <!-- CSS -->
         <link rel="stylesheet" href="../Utils/CSS/index.css">
         <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 
         <!-- JS -->
-         <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-		 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.2/angular.min.js"></script>
-		 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-route.min.js"></script>
-		 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-sanitize.js"></script>
-		  
+        <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-rc.2/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-route.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.1/angular-sanitize.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
+        
         <!-- App Module  -->
-         <script src="../app/app.js"></script>
-
+        <script src="../app/app.js"></script>
+        
         <!-- Controllers -->
-		 <script src="../app/Controllers/AppController.js"></script> 
-		 <script src="../app/Controllers/HeaderController.js"></script>
-		 <script src="../app/Controllers/UserController.js"></script>
-		 
+        <script src="../app/Controllers/AppController.js"></script>
+        <script src="../app/Controllers/HeaderController.js"></script>
+        <script src="../app/Controllers/UserController.js"></script>
+        
         <!-- Services -->
-         <script src="../app/Services/navigateTabsService.js"></script>
-         <script src="../app/Services/ytGetService.js"></script>
-         <script src="../app/Services/ytDisplayService.js"></script>
-
+        <script src="../app/Services/navigateTabsService.js"></script>
+        <script src="../app/Services/bookmarkService.js"></script>
+        <script src="../app/Services/ytGetService.js"></script>
+        <script src="../app/Services/ytDisplayService.js"></script>
+        <script src="../app/Services/getVidInfoService.js"></script>
+        
         <!--  DIRECTIVES -->
-         <script src="../app/Directives/youtubeSwapDirective.js"></script>
-         <script src="../app/Directives/sidebarDirective.js"></script>
-         <script src="../app/Directives/closeTagDirective.js"></script>
-
+        <script src="../app/Directives/ytSwapDirective.js"></script>
+        <script src="../app/Directives/sidebarDirective.js"></script>
+        <script src="../app/Directives/closeTagDirective.js"></script>
+        <script src="../app/Directives/searchFormDirective.js"></script>
+    
     </head>
     <body ng-cloak>
+
+        <!-- APP -->
         <div class="container"ng-controller="AppController">
+            
+            <!-- PAGE HEADER -->
             <div class="header" ng-controller="HeaderController">
-                <form ng-submit="Search(username)" class=" form">
-                    <h2 class="main-title">
-                        <a href="#/main" >Steins Gate</a>
-                    </h2><input ng-model="username" class="search-box" type="search" autofocus> 
-                    <a class="search-icon" href="" ng-click="submitForm(username)"> <i class="icon-f fa fa-search fa-lg"></i></a>
-                </form>
+                <sy-search-form> </sy-search-form>
             </div>
             
+            <!-- SIDEBAR -->
             <div class="sidebar-container"><sy-sidebar> </sy-sidebar> </div>
-            <div class="view-container"><div class="view" ng-view=""></div> </div>
+            
+            <!-- THE VIEW TO LOAD VIDEOS  -->
+            <div class="view-container"><div class="view" ui-view=""></div> </div>
             
         </div>
+    
     </body>
 </html>

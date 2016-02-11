@@ -1,7 +1,15 @@
 (function(){
 	var app = angular.module('YTapp');
-	var navigateTabsService = function($routeParams,$location){
+	var navigateTabsService = function($routeParams,$location,$state){
 	
+		var search = function(username)
+		{	
+			//$location.path("/users/"+username);
+			//console.log("here")
+			$state.go("user",{username:username});
+		}
+
+
 		var redirect= function(userList,username){
 			// var userList = list;
 			var userArr = Object.keys(userList);
@@ -25,7 +33,7 @@
 			}
 			console.log(userIndex);
 		}
-	return{redirect:redirect};
+	return{redirect:redirect, search:search};
 
 	}
 

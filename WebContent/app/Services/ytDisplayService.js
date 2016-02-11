@@ -7,7 +7,7 @@
 		
 		function display(userObject){
 		
-			
+			console.log(userObject)
 			var vidlist = userObject.vidlist;
 			var thumbs = userObject.thumbnailUrl;
 			
