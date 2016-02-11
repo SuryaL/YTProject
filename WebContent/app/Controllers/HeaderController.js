@@ -1,7 +1,7 @@
 (function(){
 var app = angular.module("YTapp");
 
-	var HeaderController = function($rootScope,$interval,navigateTabsService){
+	var HeaderController = function($scope,$rootScope,$interval,navigateTabsService){
 		
 		init();
 
@@ -32,7 +32,8 @@ var app = angular.module("YTapp");
 			$interval(function(){
 				navigateTabsService.search($rootScope.favs[i]);
 				i++;
-			},50,$rootScope.favs.length);
+			},50,$rootScope.favs.length)
+			
 		}
 
 

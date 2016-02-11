@@ -1,6 +1,6 @@
 (function(){
 	var app = angular.module('YTapp');
-	var navigateTabsService = function($routeParams,$location,$state){
+	var navigateTabsService = function($stateParams,$location,$state){
 	
 		var search = function(username)
 		{	
@@ -19,7 +19,7 @@
 			var prevUser = userArr[userIndex-1];
 			var nextUser = userArr[userIndex+1];
 
-			var activeUser = $routeParams.username;
+			var activeUser = $stateParams.username;
 			if(userLen>1){
 				if(activeUser === username){
 					if(!!nextUser){

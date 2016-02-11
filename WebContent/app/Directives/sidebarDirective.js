@@ -8,7 +8,7 @@
 		replace:true,
 		templateUrl: '../Views/sidebar.html',
 
-		controller:function($scope,$rootScope,bookmarkService){
+		controller:function($scope,$stateParams,$rootScope,bookmarkService, navigateTabsService){
 	
 				$scope.bmarkToggle = bookmarkService.bmarkToggle;
 				$scope.isBookmarked = bookmarkService.isBookmarked;
@@ -22,7 +22,8 @@
 
 				// Returns whether the specified user is active tab
 				$scope.isActive= function(datalist)
-				{	return datalist === $scope.useful.currentUsername }
+				// {	return datalist === $scope.useful.currentUsername }
+				{	return datalist === $stateParams.username }
 		
 
 			}	
